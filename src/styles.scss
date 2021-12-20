@@ -1,0 +1,76 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f0f0f0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-weight: 700;
+  color: #333;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  &:hover {
+    color: #0d0d0d;
+    text-decoration: underline;
+  }
+}
+
+/* Form */
+.form-control {
+  margin-bottom: 5px;
+}
+
+/* Table */
+.table {
+  thead {
+    background-color: #b8daff;
+
+    th {
+      border-bottom: 0;
+      &.text-right {
+        text-align: right;
+      }
+    }
+  }
+
+  > :not(:first-child) {
+    border-top: 0;
+  }
+
+  > :not(caption) {
+    & > * > * {
+      border-bottom: 0;
+    }
+  }
+
+  td {
+    &.text-right {
+      text-align: right;
+    }
+  }
+}
+
+/* Icons */
+.bi {
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+}

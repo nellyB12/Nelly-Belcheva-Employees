@@ -1,0 +1,27 @@
+<app-card [headerTitle]="headerTitle" [headerIcon]="headerIcon">
+  <h4 class="card-title">Upload file</h4>
+  <p>Please select a file and upload it to find the best pair/s.<br>
+    The file should be in text format with data for <b>EmpID</b>, <b>ProjectID</b>, <b>DateFrom</b>, <b>DateTo</b>. DateTo can be also <b>NULL</b> (today).</p>
+  <form [formGroup]="uploadForm">
+    <div class="file-upload">
+      <div class="alert alert-danger" *ngIf="fileInput.invalid && fileInput.touched">
+        <div *ngIf="fileInput.errors && fileInput.errors.required">File is required.</div>
+        <div *ngIf="fileInput.errors && fileInput.errors.type">Unsupported file format.</div>
+      </div>
+      <input type="file" class="d-none" (change)="onFileSelected($event)" #uploadFile>
+      <div class="file-name">{{ fileName || 'No file uploaded.' }}</div>
+      <button type="button" class="btn btn-primary" (click)="uploadFile.click()">Attach file</button>
+      <ng-container *ngIf="fileErrors.length">
+        <div class="mt-2">
+          <ng-container *ngFor="let error of fileErrors">
+            <div class="alert alert-danger">{{ error }}</div>
+          </ng-container>
+          <div class="alert alert-info">Please check the file content and try again.</div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="evaluatorError.length">
+        <div class="alert alert-danger mt-2" *ngFor="let evaluator of evaluatorError">{{ evaluator }}</div>
+      </ng-container>
+    </div>
+  </form>
+</app-card>

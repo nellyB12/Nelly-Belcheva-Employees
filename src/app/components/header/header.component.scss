@@ -1,0 +1,42 @@
+header {
+  color: #fff;
+  background-color: #0d0d0d;
+  width: 100%;
+  padding: 10px 15px;
+
+  h6 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .date,
+  .time {
+    display: none;
+    padding: 0 5px;
+    margin-bottom: 0;
+  }
+
+  .link-logout {
+    color: #fff;
+    cursor: pointer;
+    padding-left: 10px;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  header {
+    .date,
+    .time {
+      display: inline-block;
+    }
+  }
+}

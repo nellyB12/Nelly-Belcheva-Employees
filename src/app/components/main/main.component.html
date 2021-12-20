@@ -1,0 +1,27 @@
+<main>
+  <div class="content-wrapper">
+    <div class="content-header">
+      <h3 class="content-title">{{ title }}</h3>
+    </div>
+    <div class="content row align-items-stretch">
+      <!-- request -->
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <app-card-file [headerTitle]="'Create statistics'" [headerIcon]="'bi bi-diagram-3-fill'"></app-card-file>
+      </div>
+
+      <!-- response in grid -->
+      <ng-container *ngIf="results && results.length; else noResults">
+        <div class="col-12 col-lg-6">
+          <app-card-results [headerTitle]="'Results'" [headerIcon]="'bi bi-table'" [results]="results"></app-card-results>
+        </div>
+      </ng-container>
+      <ng-template #noResults>
+        <div class="col-12 col-lg-6">
+          <app-card [headerTitle]="'Results'" [headerIcon]="'bi bi-table'">
+            No results found.
+          </app-card>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</main>
