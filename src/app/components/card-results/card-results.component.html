@@ -11,11 +11,11 @@
     </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let projectRecord of projectRecords">
+      <tr *ngFor="let mapEntry of result.projectTimes | keyvalue">
         <td>{{ result.employee1Id }}</td>
         <td>{{ result.employee2Id }}</td>
-        <td>{{ projectRecord.projectId }}</td>
-        <td class="text-right">{{ projectRecord.days }}</td>
+        <td>{{ mapEntry.key }}</td>
+        <td class="text-right">{{ mapEntry.value }}</td>
       </tr>
       <tr class="table-active">
         <td colspan="3"><b>Total:</b></td>

@@ -60,8 +60,9 @@ export class CommonProjectWorkEvaluatorService {
         bestTime = pr.totalTime;
       }
     });
-
-    return pairResults.get(bestTime);
+    let result = pairResults.get(bestTime)!;
+    console.log(result);
+    return result;
   }
 
   private getProjectsAsArray(): Project[] {
