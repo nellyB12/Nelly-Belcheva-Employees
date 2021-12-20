@@ -1,4 +1,4 @@
-# Find pairs or employees worked longest on common projects.
+# Find employee pairs worked longest on common projects.
 ### Nelly Belcheva
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
@@ -22,6 +22,9 @@ EmpID, ProjectID, DateFrom, DateTo
 #### Prerequisites
 
 * DateTo can be 'NULL' which is interpred as current date
+* To demonstrate the validation employee and project ids are expected to be positive numbers. This can be easily changed if strings are required. 
+* More than one work log per project is supported. Employee can work on one project, then switch to something else and the return to the original project. 
+* Overlapped periods are not supported. As the log granularity is day each employee should work on one project maximum on given date
 
 ### Solution
 
@@ -65,7 +68,22 @@ If there is more than one pair, the pair information is displayed in separate ta
 
 ![Uploading file](docs/scr2.png)
 
-### Install / run
+### Build & run
+
+You need to install Node.js and then the development tools. Node.js comes with a package manager called [npm](http://npmjs.org) for installing NodeJS applications and libraries.
+* [Install node.js](http://nodejs.org/download/) 
+
+#### Get the Code
+
+Either clone this repository or fork it on GitHub and clone your fork:
+
+```
+git clone https://github.com/nellyB12/Nelly-Belcheva-Employees.git
+cd Nelly-Belcheva-Employees
+nmp install
+```
+
+
 
 #### Development server
 
